@@ -7,7 +7,7 @@
     <title>Meu portal de notícias</title>
     <link rel="stylesheet" href="./main.css" />
 </head>
-<body>
+<body onscroll="fixedHeader()">
     <header>
         <div class="container">
             <h1>Meu portal de notícias</h1>
@@ -18,6 +18,12 @@
                     </li>
                     <li>
                         <a href="#economy" title="Ir para a seção de notícias">Economia</a>
+                    </li>
+                    <li>
+                        <a href="#entertainment" title="Ir para a seção de notícias">Entreterimento</a>
+                    </li>
+                    <li>
+                        <a href="#tecnology" title="Ir para a seção de notícias">Tecnologia</a>
                     </li>
                 </ul>
             </nav>
@@ -158,7 +164,7 @@
         </div>
     </section>
 
-    <section id="technology">
+    <section id="tecnology">
         <div class="container">
             <h2>Tecnologia</h2>
             <div class="articles">
@@ -198,5 +204,18 @@
             </div>
         </div>
     </section>
+
+    <script>
+        function fixedHeader() {
+            document.addEventListener("scroll", () => {
+                if (window.scrollY > 90) {
+                    document.querySelector("header").classList.add("scroll-fixed");
+                }
+                if (window.scrollY <= 10) {
+                    document.querySelector("header").classList.remove("scroll-fixed");
+                }
+            });
+        }
+    </script>
 </body>
 </html>

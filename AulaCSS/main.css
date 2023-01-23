@@ -24,6 +24,13 @@ header li a {
     color: #f5f6fa;
     text-decoration: none;
 }
+body > header.scroll-fixed {
+    position: sticky;
+    top: 0px;
+    padding: 0;
+    transition: ease-in-out 0.5s;
+    z-index: 1;
+}
 
 .container {
     /* width: 1366px; */
@@ -107,7 +114,7 @@ section h2 {
 #technology {
     background-color: #a19ff89c;
 }
-#technology .articles article a {
+#tecnology .articles article a {
     background-color: rgba(0, 110, 255, 0.798);
     color: #000;
 }
