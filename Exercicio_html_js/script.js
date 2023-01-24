@@ -10,7 +10,7 @@ form.addEventListener("submit", (event) => {
     if (formIsValid) {
         removeError();
         document.querySelector(".message-success").style = "display: block";
-        form.resete();
+        form.reset();
     }
 });
 
