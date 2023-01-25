@@ -9,7 +9,8 @@ form.addEventListener("submit", (event) => {
 
     if (formIsValid) {
         removeError();
-        document.querySelector(".message-success").style = "display: block";
+        document.querySelector(".message-form-valid").classList.add("message-success");
+        document.querySelector(".message").classList.remove("message-success");
         form.reset();
     }
 });
@@ -27,8 +28,9 @@ secondNumber.addEventListener("keyup", (event) => {
 });
 
 function setaError() {
-    document.querySelector(".message-error").textContent = "O primeiro número que tem que ser maior que o sengundo";
-    document.querySelector(".message-error").style = "display: block";
+    document.querySelector(".message").textContent = "O primeiro número que tem que ser maior que o sengundo";
+    document.querySelector(".message").classList.add("message-error");
+    document.querySelector(".message").classList.remove("message-success");
     primaryNumber.classList.add("input-error");
     buttonEnviar.setAttribute("disabled", "true");
     buttonEnviar.classList.add("disabled");
@@ -37,7 +39,9 @@ function setaError() {
 
 function removeError() {
     formIsValid = true;
-    document.querySelector(".message-error").style = "";
+    document.querySelector(".message").textContent = "Tudo certo por aqui";
+    document.querySelector(".message").classList.add("message-success");
+    document.querySelector(".message").classList.remove("message-error");
     primaryNumber.classList.remove("input-error");
     buttonEnviar.removeAttribute("disabled");
     buttonEnviar.classList.remove("disabled");
