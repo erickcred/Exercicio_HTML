@@ -26,6 +26,18 @@ header .container div {
     justify-content: space-between;
     align-items: center;
 }
+form #pesquisa,
+button {
+    border-radius: 5px;
+    padding: 8px;
+}
+form button {
+    cursor: pointer;
+}
+#button-menu-mobile {
+    margin: 10px 0;
+    display: none;
+}
 .menu > li {
     float: left;
     list-style: none;
@@ -83,7 +95,7 @@ header .container div {
 }
 .destaque .noticia a {
     display: flex;
-    font-size: 2em;
+    font-size: 1.5em;
     gap: .5em
 }
 
@@ -100,7 +112,73 @@ aside .noticia {
 
 .noticias {
     display: grid;
-    grid-template-columns: repeat(3, 32%);
+    grid-template-columns: repeat(3, calc(100% / 3));
     column-gap: 2%;
     row-gap: 5%;
+}
+
+
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 90%;
+    }
+    header .container div {
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    #button-menu-mobile {
+        display: block;
+    }
+
+    .menu {
+        display: none;     
+    }
+
+    .menu > li {
+        clear: both;
+        float: none;
+    }
+    
+    .submenu {
+        display: block;
+        border: none;
+        position: relative;
+        width: 100%;
+        margin-top: 10px
+    }
+
+    .conteudo {
+        display: block;
+    }
+
+    .destaque .noticia a {
+        display: block;
+        font-size: 1.5em;
+    }
+
+    .noticia img {
+        width: 100%;
+    }
+
+    .destaque .noticia img {
+        margin-right: 0;
+    }
+
+    .noticias {
+        display: block;
+    }
+    .noticias .noticia {
+        margin-bottom: 2em;
+    }
+
+    aside {
+        padding-left: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .noticias {
+        grid-template-columns: repeat(2, calc(100% / 2))
+    }
 }

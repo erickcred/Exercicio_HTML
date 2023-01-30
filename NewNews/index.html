@@ -7,10 +7,6 @@
     <title>Portal de noticias News</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <style>
-        
-        
-    </style>
 </head>
 <body>
     
@@ -19,9 +15,10 @@
             <div>
                 <h1>New News</h1>
                 <form action="" method="post">
-                    <input type="search" name="pesquisa" placeholder="Busque no site">
+                    <input id="pesquisa" type="search" name="pesquisa" placeholder="Busque no site">
                     <button type="sumit">Pesquisar</button>
                 </form>
+                <button id="button-menu-mobile">Abrir menu</button>
             </div>
             <nav>
                 <ul class="menu">
@@ -129,5 +126,15 @@
     </div>
 
     <footer></footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            console.log("Ols")
+            $("#button-menu-mobile").click(() => {
+                $(".menu").slideToggle(600)
+            });
+        })
+    </script>
 </body>
 </html>
