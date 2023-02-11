@@ -1,0 +1,204 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrIzc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjARc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu52xP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ABc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBhc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgWxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5vAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9vAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlvAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtvAw.ttf) format('truetype');
+}
+.marginBottom8 {
+  margin-bottom: 8px;
+}
+.fontSeize14 {
+  font-size: 14px;
+}
+.borderRadius24 {
+  border-radius: 24px;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #222f3e;
+  color: #c8d6e5;
+}
+li {
+  list-style: none;
+}
+li a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1024px;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header {
+  padding: 24px;
+}
+header .profile-avatar {
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  height: 100px;
+}
+.profile-bio {
+  text-align: center;
+}
+.profile-bio-name {
+  margin-bottom: 8px;
+}
+.profile-bio-subtitle {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.profile-bio-description {
+  opacity: 0.7;
+}
+@media (max-width: 767px) {
+  .profile-bio-name {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .profile-bio-subtitle {
+    font-size: 14px;
+  }
+  .profile-bio-description {
+    font-size: 14px;
+  }
+}
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 240px;
+  width: 100%;
+  margin: 0 auto;
+}
+.social-links li img {
+  transition: all ease 0.3s;
+}
+.social-links li img:hover {
+  transform: scale(1.3);
+  transition: all ease 0.3s;
+  animation: up 0.4s;
+}
+.portfolio-project {
+  margin-top: 2em;
+}
+.portfolio-project-item-list {
+  margin-bottom: 1em;
+}
+.portfolio-project-item-list a {
+  background-color: #5f27cd;
+  padding: 0.5em 1em;
+  border-radius: 24px;
+  border: 3px solid transparent;
+  display: flex;
+  gap: 3em;
+  align-items: center;
+  transition: all ease 0.5s;
+}
+@media (max-width: 767px) {
+  .portfolio-project-item-list a {
+    gap: 0.6em;
+  }
+}
+.portfolio-project-item-list a:hover {
+  border: 3px solid #5f27cd;
+  background-color: transparent;
+  color: #5f27cd;
+}
+.portfolio-project-description {
+  color: #c8d6e5;
+}
+.portfolio-project-image {
+  height: 110px;
+  border-radius: 24px;
+}
+@media (max-width: 767px) {
+  .portfolio-project-image {
+    height: 85px;
+  }
+}
