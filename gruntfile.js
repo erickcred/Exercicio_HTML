@@ -55,7 +55,7 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         flatten: true,
-                        src: ["src/*.html"],
+                        src: ["prebuild/*.html"],
                         dest: "dist/"
                     }
                 ]
@@ -65,7 +65,9 @@ module.exports = function(grunt) {
             dist: {
                 options: { removeComments: true, collapseWhitespace: true },
                 files: [
-                    { "prebuild/index.html": "src/*.html" }
+                    { "prebuild/index.html": "src/index.html" },
+                    { "prebuild/processos.html": "src/processos.html" },
+                    { "prebuild/contato.html": "src/contato.html" }
                 ]
             }
         },
