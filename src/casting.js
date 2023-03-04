@@ -7,4 +7,9 @@ var casting;
     idade.forEach(x => {
         console.log(x);
     });
+    // as unknown conversão para um tipo desconhecido 
+    let nome = 35;
+    // parseInt("35");
+    // parseFloat("10");
+    // 10.toString();
 })(casting || (casting = {}));
