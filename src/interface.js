@@ -13,10 +13,15 @@ class ContaSalario extends Conta {
 class ContaCorrente extends Conta {
     constructor() {
         super(...arguments);
-        this.taxaTrasferencia = 0;
+        this.taxaTransferencia = 0;
     }
     transferir(valor, destinatario) {
-        destinatario.saldo += valor;
-        return true;
+        if (this.saldo >= valor) {
+            destinatario.saldo -= valor;
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

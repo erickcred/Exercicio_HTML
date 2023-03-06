@@ -2,10 +2,9 @@ class Conta {
     numeroDaConta: number;
     saldo: number = 0;
 
-    constructor(numeroDaConta: number) {
+    constructor(numeroDaConta: number){
         this.numeroDaConta = numeroDaConta;
     }
-
 }
 
 class ContaSalario extends Conta {
@@ -16,14 +15,25 @@ class ContaSalario extends Conta {
 
 interface ITransacional {
     transferir: (valor: number, destinatario: Conta) => boolean;
-    taxaTrasferencia: number;
+    taxaTransferencia: number;
 }
 
-class ContaCorrente extends Conta implements ITransacional {
-    transferir(valor: number, destinatario: Conta) {
-        destinatario.saldo += valor;
-        return true
-    }
+interface IExemplo2 {
+    cnpj: number;
+}
 
-    taxaTrasferencia: number = 0;
+interface IExemplo3 extends IExemplo2 {
+    telefone: number;
+}
+
+class ContaCorrente extends Conta implements ITransacional/**, IExemplo3*/ {
+    transferir(valor: number, destinatario: Conta) {
+        if (this.saldo >= valor) {
+            destinatario.saldo -= valor;
+            return true;
+        } else {
+            return false;
+        }
+    }
+    taxaTransferencia: number = 0;
 }
