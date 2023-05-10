@@ -19,12 +19,12 @@ describe('Testando interação com contatos', () => {
         cy.get('.adicionar').click()
     })
 
-    it('Deve apresentar 2 contatos na lista', () => {
-        cy.get('.contato').should('have.length', 2)
+    it('Deve apresentar 5 contatos na lista', () => {
+        cy.get('.contato').should('have.length', 5)
     })
 
     it('Deve selecionar e editar 1 contato', () => {
-        cy.get('.edit').first().click()
+        cy.get(':nth-child(2) > .sc-gueYoa > .edit').click()
 
         cy.get('input[type="text"]').clear().type('Fulano da Silva Souza Sauro')
         cy.get('input[type="email"]').clear().type('fulano.sas@email.com')
@@ -37,7 +37,7 @@ describe('Testando interação com contatos', () => {
         cy.get(':nth-child(3) > .sc-gueYoa > .delete').click()
     })
 
-    it('Deve apresentar 1 contato na lista', () => {
-        cy.get('.contato').should('have.length', 1)
+    it('Deve apresentar 4 contato na lista', () => {
+        cy.get('.contato').should('have.length', 4)
     })
 })
