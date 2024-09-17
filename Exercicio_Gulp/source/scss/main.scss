@@ -1,0 +1,10 @@
+@use "reset";
+@use "variaveis";
+
+body {
+    background-color: variaveis.$corPrincipal;
+}
+
+img {
+    height: 350px
+}
